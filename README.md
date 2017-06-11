@@ -24,3 +24,34 @@ To prevent this a check should be made at the point of updating the voter record
 
 ## Tools & Technologies Used:
 Spring Tool Suite IDE, Java, Spring Boot, HSQL database
+
+## How To Run:
+1) Import project into STS.
+2) Right click on project and Run As Java Application.
+3) Once running you can use a REST client such as Advanced REST client for Google Chrome.
+
+Rest calls you can make:
+```
+GET		http://localhost:8080/result
+```
+Shows the results of the voting.
+
+```
+GET		http://localhost:8080/voters
+```
+Shows the voters registered.
+
+```
+GET		http://localhost:8080/candidates
+```
+Shows the candidates registered.
+
+```
+POST	http://localhost:8080/vote
+```
+Submits a vote. You need to provide a voter id (representing the voter that is voting) and a candidate id (representing the candidate the vote is for). E.g.of content:
+{
+    "voterId":10,
+    "candidateId":20
+}
+You can look up a voter/candidate id via calls to the voters/candidates resources. 
