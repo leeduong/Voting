@@ -19,19 +19,19 @@ import com.leeduong.voting.domain.VoterRepository;
 @RestController
 public class VoterController {
 	private VoterRepository voterRepository;
-	
+
 	@Autowired
 	public VoterController(VoterRepository voterRepository) {
 		this.voterRepository = voterRepository;
 	}
-	
+
 	/**
 	 * This method handles GET requests for /voters.
 	 * 
 	 * @return a list of {@link Voter}s.
 	 */
-    @RequestMapping(value = "/voters", method = RequestMethod.GET, produces = "application/json")
-    public List<Voter> getVoters() {
-    	return voterRepository.findAll();
-    }
+	@RequestMapping(value = "/voters", method = RequestMethod.GET, produces = "application/json")
+	public List<Voter> getVoters() {
+		return voterRepository.findAll();
+	}
 }

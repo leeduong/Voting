@@ -35,8 +35,5 @@ public class DatabaseSeeder implements CommandLineRunner {
 		candidates.add(new Candidate("C", 0));
 		candidates.add(new Candidate("D", 0));
 		candidateRepository.save(candidates);
-				
-		
 	}
-
 }

@@ -20,19 +20,19 @@ import com.leeduong.voting.service.ResultService;
 @RestController
 public class ResultController {
 	private ResultService resultService;
-	
+
 	@Autowired
 	public ResultController(ResultService resultService) {
 		this.resultService = resultService;
 	}
-	
+
 	/**
 	 * This method handles GET requests for /result.
 	 * 
 	 * @return a list of {@link Candidate}s.
 	 */
-    @RequestMapping(value = "/result", method = RequestMethod.GET, produces = "application/json")
-    public List<Result> result(){
-    	return resultService.result();
-    }
+	@RequestMapping(value = "/result", method = RequestMethod.GET, produces = "application/json")
+	public List<Result> result() {
+		return resultService.result();
+	}
 }

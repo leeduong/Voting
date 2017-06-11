@@ -10,5 +10,4 @@ import org.springframework.web.bind.annotation.ResponseStatus;
  */
 @ResponseStatus(value=HttpStatus.NOT_FOUND, reason="Invalid id")
 public class InvalidIdException extends Exception {
-
 }

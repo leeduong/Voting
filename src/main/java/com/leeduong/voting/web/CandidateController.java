@@ -18,19 +18,19 @@ import com.leeduong.voting.domain.CandidateRepository;
 @RestController
 public class CandidateController {
 	private CandidateRepository candidateRepository;
-	
+
 	@Autowired
 	public CandidateController(CandidateRepository candidateRepository) {
 		this.candidateRepository = candidateRepository;
 	}
-	
+
 	/**
 	 * This method handles GET requests for /candidates.
 	 * 
 	 * @return a list of {@link Candidate}s.
 	 */
-    @RequestMapping(value = "/candidates", method = RequestMethod.GET, produces = "application/json")
-    public List<Candidate> getCandidates() {
-    	return candidateRepository.findAll();
-    }
+	@RequestMapping(value = "/candidates", method = RequestMethod.GET, produces = "application/json")
+	public List<Candidate> getCandidates() {
+		return candidateRepository.findAll();
+	}
 }
