@@ -50,8 +50,10 @@ Shows the candidates registered.
 POST	http://localhost:8080/vote
 ```
 Submits a vote. You need to provide a voter id (representing the voter that is voting) and a candidate id (representing the candidate the vote is for). E.g.of content:
+```
 {
     "voterId":10,
     "candidateId":20
 }
+```
 You can look up a voter/candidate id via calls to the voters/candidates resources. 
